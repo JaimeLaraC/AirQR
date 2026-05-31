@@ -1,0 +1,180 @@
+:root {
+  color: #0f172a;
+  background: #f8fafc;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.desktop-home,
+.desktop-screen {
+  min-height: 100dvh;
+  width: 100%;
+  background:
+    radial-gradient(circle at 50% -10%, rgba(226, 232, 240, 0.85), transparent 32rem),
+    #f8fafc;
+}
+
+.desktop-home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.home-stack {
+  width: min(100%, 420px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.home-logo {
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  color: #0f172a;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 24px 56px rgba(15, 23, 42, 0.1);
+}
+
+.home-stack h1 {
+  margin: 26px 0 8px;
+  font-size: clamp(48px, 9vw, 72px);
+  line-height: 0.95;
+  letter-spacing: 0;
+  color: #0f172a;
+}
+
+.home-stack > p {
+  margin: 0 0 40px;
+  font-size: 18px;
+  color: #64748b;
+}
+
+.role-list {
+  width: 100%;
+  display: grid;
+  gap: 16px;
+}
+
+.role-card {
+  width: 100%;
+  min-height: 96px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  text-align: left;
+  color: #0f172a;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.07);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.role-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd5e1;
+  box-shadow: 0 24px 52px rgba(15, 23, 42, 0.1);
+}
+
+.role-icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  color: #0f172a;
+  background: #f1f5f9;
+  border-radius: 20px;
+}
+
+.role-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.role-copy strong {
+  font-size: 19px;
+}
+
+.role-copy span {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.role-arrow {
+  color: #94a3b8;
+}
+
+.desktop-screen {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  gap: 16px;
+}
+
+.desktop-topbar {
+  min-height: 48px;
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  align-items: center;
+  gap: 12px;
+}
+
+.desktop-topbar h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.back-button,
+.close-result,
+.small-icon-button {
+  border: 0;
+  color: #0f172a;
+  background: #ffffff;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+}
+
