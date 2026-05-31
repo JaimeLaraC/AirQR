@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { HomeMobile } from "./screens/HomeMobile";
+import { ReceiverMobile } from "./screens/ReceiverMobile";
 import "./styles/mobile.css";
 
 type Route = "home" | "sender" | "receiver";
@@ -11,11 +12,8 @@ type Route = "home" | "sender" | "receiver";
 export function MobileApp() {
   const [route, setRoute] = useState<Route>("home");
 
-  if (route === "sender") {
-    // SenderMobile se conecta en la feature del emisor.
-  }
   if (route === "receiver") {
-    // ReceiverMobile se conecta en la feature del receptor.
+    return <ReceiverMobile onBack={() => setRoute("home")} />;
   }
 
   return <HomeMobile onSender={() => setRoute("sender")} onReceiver={() => setRoute("receiver")} />;
