@@ -14,9 +14,22 @@ acumulativo, cifrado de la imagen y verificación de integridad con SHA-256.
 Ábrela en dos dispositivos (uno como emisor y otro como receptor). Al servirse por HTTPS, el
 navegador permite el acceso a la cámara.
 
+## Interfaz adaptable (escritorio y móvil)
+
+La app detecta el dispositivo y muestra la interfaz adecuada:
+
+- **Escritorio / ventana ancha**: estación óptica con cámara y QR en dos paneles lado a lado.
+- **Móvil / pantalla táctil**: réplica de la app nativa AirQR (inicio con tarjetas, estación
+  vertical cámara-arriba/QR-abajo, paneles deslizantes de estado y proceso, visor de la foto
+  recibida con descargar/compartir). La transferencia usa el protocolo AirQR 2.0 (ventana).
+
+La detección es responsive (ancho ≤ 820 px o pantalla táctil), así que también cambia al
+redimensionar el navegador.
+
 ## Características
 
 - Emisor y receptor en la misma aplicación (React + Vite).
+- Interfaz responsive: versión de escritorio y versión móvil (réplica de la app nativa).
 - Núcleo propio en `src/core`: protocolo, criptografía y motor de transferencia.
 - Cifrado de la imagen con XChaCha20-Poly1305 e intercambio de claves X25519 + HKDF.
 - Integridad verificada con CRC-32 por fragmento y SHA-256 del fichero completo.
