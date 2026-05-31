@@ -17,6 +17,7 @@
     "@vitejs/plugin-react": "^5.1.1",
     "base64-js": "^1.5.1",
     "crc-32": "^1.2.2",
+    "lucide-react": "^1.17.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "vite": "^7.2.4"
