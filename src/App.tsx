@@ -2,12 +2,20 @@ import { useState } from "react";
 import { Camera, ChevronRight, QrCode, Upload } from "lucide-react";
 import { ReceiverDesktop } from "./screens/ReceiverDesktop";
 import { SenderDesktop } from "./screens/SenderDesktop";
+import { MobileApp } from "./mobile/MobileApp";
+import { useIsMobile } from "./mobile/useIsMobile";
 import "./styles/app.css";
 
 type Route = "home" | "sender" | "receiver";
 
 export function App() {
+  const isMobile = useIsMobile();
   const [route, setRoute] = useState<Route>("home");
+
+  // En móvil (o ventana estrecha/táctil) se muestra la interfaz tipo app nativa.
+  if (isMobile) {
+    return <MobileApp />;
+  }
 
   if (route === "sender") {
     return <SenderDesktop onBack={() => setRoute("home")} />;
