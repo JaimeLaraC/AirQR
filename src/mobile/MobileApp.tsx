@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { HomeMobile } from "./screens/HomeMobile";
 import { ReceiverMobile } from "./screens/ReceiverMobile";
+import { SenderMobile } from "./screens/SenderMobile";
 import "./styles/mobile.css";
 
 type Route = "home" | "sender" | "receiver";
@@ -11,6 +12,10 @@ type Route = "home" | "sender" | "receiver";
  */
 export function MobileApp() {
   const [route, setRoute] = useState<Route>("home");
+
+  if (route === "sender") {
+    return <SenderMobile onBack={() => setRoute("home")} />;
+  }
 
   if (route === "receiver") {
     return <ReceiverMobile onBack={() => setRoute("home")} />;
