@@ -7,6 +7,13 @@ otro lee con la cámara/webcam. La red solo se usa para cargar la aplicación en
 AirQR implementa el protocolo **AirQR 2.0**: una "ventana TCP óptica" de 4 fragmentos con ACK
 acumulativo, cifrado de la imagen y verificación de integridad con SHA-256.
 
+## Demo
+
+👉 **https://JaimeLaraC.github.io/AirQR/**
+
+Ábrela en dos dispositivos (uno como emisor y otro como receptor). Al servirse por HTTPS, el
+navegador permite el acceso a la cámara.
+
 ## Características
 
 - Emisor y receptor en la misma aplicación (React + Vite).
