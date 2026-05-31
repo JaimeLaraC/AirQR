@@ -1,0 +1,14 @@
+# Dependencias
+node_modules
+package-lock.json
+
+# Build
+dist
+*.tsbuildinfo
+.vite
+
+# Entorno / editores
+.DS_Store
+*.local
+.env
+.env.*
