@@ -778,3 +778,145 @@ button:disabled {
   color: #ffffff;
   background: #0f172a;
   border-radius: 24px;
+  box-shadow: 0 24px 58px rgba(15, 23, 42, 0.28);
+  animation: toast-pop 3.5s ease both;
+}
+
+.completion-toast strong {
+  font-size: 16px;
+}
+
+.completion-toast span {
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.spin {
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes toast-pop {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 18px) scale(0.96);
+  }
+  12%,
+  82% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 18px) scale(0.96);
+  }
+}
+
+@media (min-width: 1024px) {
+  .desktop-screen {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .transfer-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 0.82fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .receiver-bottom-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(380px, 0.82fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .desktop-home,
+  .desktop-screen {
+    padding: 14px;
+  }
+
+  .home-logo {
+    width: 84px;
+    height: 84px;
+  }
+
+  .role-card {
+    min-height: 88px;
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .desktop-topbar {
+    grid-template-columns: 44px 1fr 44px;
+  }
+
+  .preflight-content {
+    padding: 22px;
+    border-radius: 28px;
+  }
+
+  .transfer-grid {
+    gap: 12px;
+    grid-template-rows: minmax(220px, 1fr) minmax(220px, 1fr);
+  }
+
+  .camera-card,
+  .qr-card,
+  .sender-progress-card,
+  .terminal-card,
+  .result-card {
+    border-radius: 26px;
+  }
+
+  .camera-label {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .camera-label small {
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .scan-frame {
+    inset: 22%;
+  }
+}
+
+@media (max-height: 720px) {
+  .desktop-screen {
+    gap: 10px;
+  }
+
+  .desktop-topbar {
+    min-height: 42px;
+  }
+
+  .transfer-grid {
+    grid-template-rows: minmax(170px, 1fr) minmax(170px, 1fr);
+    gap: 10px;
+  }
+
+  .sender-progress-card,
+  .terminal-card {
+    padding: 14px;
+  }
+
+  .progress-heading p,
+  .transfer-stats,
+  .file-note {
+    font-size: 12px;
+  }
+
+  .terminal-card {
+    min-height: 118px;
+  }
+
+  .terminal-lines {
+    max-height: 78px;
+  }
+}
